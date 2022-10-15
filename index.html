@@ -150,7 +150,8 @@
           $count = document.getElementById("unread-notifications-count"),
           $notifications = document.querySelectorAll(".notification.unread");
 
-        $btn.addEventListener("click", function () {
+        $btn.addEventListener("click", function (e) {
+          e.preventDefault();
           $notifications.forEach(function ($el) {
             $el.classList.remove("unread");
           });
