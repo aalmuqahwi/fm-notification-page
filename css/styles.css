@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+* {
+  margin: 0;
+  color: inherit;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: hsl(210deg, 60%, 98%);
+  font-size: 16px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 15px;
+  background-color: hsl(0deg, 0%, 100%);
+  width: 700px;
+}
+.container header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+.container header .title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.container header .title h2 {
+  color: hsl(224deg, 21%, 14%);
+}
+.container header .title span {
+  padding: 5px 7px;
+  width: 20px;
+  border-radius: 5px;
+  text-align: center;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(219deg, 85%, 26%);
+}
+.container header .actions a {
+  color: hsl(219deg, 12%, 42%);
+}
+.container header .actions a:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.container main {
+  margin-top: 15px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.container main .notification {
+  display: flex;
+  gap: 15px;
+  padding: 15px 15px;
+  border-radius: 10px;
+  font-size: 0.98rem;
+  color: hsl(219deg, 12%, 42%);
+}
+.container main .notification div:first-child img {
+  width: 45px;
+}
+.container main .notification div:nth-child(2) {
+  flex: 1;
+}
+.container main .notification div:nth-child(2) strong {
+  color: hsl(224deg, 21%, 14%);
+}
+.container main .notification div:nth-child(2) p {
+  display: inline;
+}
+.container main .notification div:nth-child(2) p a {
+  color: hsl(219deg, 12%, 42%);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.container main .notification div:nth-child(2) p a:active, .container main .notification div:nth-child(2) p a:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.container main .notification div:nth-child(2) span {
+  display: block;
+  margin-top: 5px;
+  color: hsl(219deg, 14%, 63%);
+}
+.container main .notification div:nth-child(2) .comment {
+  border: 1px solid hsl(205deg, 33%, 90%);
+  padding: 15px 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+.container main .notification div:nth-child(2) .comment:active, .container main .notification div:nth-child(2) .comment:hover {
+  background-color: hsl(211deg, 68%, 94%);
+}
+.container main .notification div:last-child img {
+  width: 40px;
+}
+.container main .notification.unread {
+  background-color: hsl(210deg, 60%, 98%);
+}
+.container main .notification.unread div:nth-child(2) p::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-left: 5px;
+  background-color: hsl(1deg, 90%, 64%);
+}
+@media screen and (min-width: 785px) {
+  .container {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 0.6rem;
+  }
+}
